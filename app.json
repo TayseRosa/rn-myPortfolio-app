@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "TayseRosaDevMobile",
+    "slug": "TayseRosaDevMobile",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "TayseRosaDevMobile"
+}
