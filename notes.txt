@@ -1,0 +1,66 @@
+Notes:
+
+### TYPESCRIPT ###
+
+
+### ADICIONAR TYPESCRIPT NO PROJETO ###
+
+
+
+### STANDARD COLORS ###
+1. Em src/global/styles/themes.ts, criar o tema com as cores desejadas;
+2. No App.js, importar import { ThemeProvider } from 'styled-components' e envolver o app pelo <ThemeProvider theme={theme} >;
+3. Nos styles, usar o tema da seguinte forma, ex: background-color: ${({ theme }) => theme.colors.background};
+4. Para corrigir os erros ao chamar o theme.colors.xxx, criar o seguinte arquivo no mesmo local do theme styles.d.ts
+import 'styled-components';
+import theme from './theme';
+
+declare module 'styled-components'{
+    type ThemeType = typeof theme
+
+    export interface DefaultTheme extends ThemeType{}
+}
+ 
+### STANDARD FONTS ###
+❯ expo install expo-font @expo-google-fonts/poppins               
+Em App.js:
+//Standart Fonts
+import {
+  useFonts,
+  Poppins_400Regular,
+  Poppins_500Medium,
+  Poppins_700Bold
+}from '@expo-google-fonts/poppins';
+.
+.
+.
+❯ expo install expo-app-loading
+.
+.
+.
+import AppLoading from 'expo-app-loading';
+.
+.
+.
+
+export default function App(){
+  const [ fontsLoaded ] = useFonts({
+    Poppins_400Regular,
+    Poppins_500Medium,
+    Poppins_700Bold
+  });
+  if(!fontsLoaded){
+    return <AppLoading />{/*TELA DE SPLASH*/}
+  }
+
+  return(.....
+
+  e agora para incluir as fontes no nosso estilo de theme:
+  .
+  .
+  .
+  fonts:{
+        regular:'Poppins_400Regular',
+        medium: 'Poppins_500Medium',
+        bold: 'Poppins_700Bold'
+    }
