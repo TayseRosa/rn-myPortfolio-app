@@ -94,8 +94,8 @@ export default function Routes(){
             />
 
             <Tab.Screen 
-                name="CalculadoraGorjeta" 
-                component={CalculadoraGorjeta} 
+                name="TelaAsyncStorage" 
+                component={TelaAsyncStorage} 
                 options={{
                     tabBarIcon: ({ size, color }) => (
                         <Feather name="share-2" size={size} color={color} />

@@ -26,7 +26,7 @@ export default () => {
 
     return(
         <View>
-            <Text> Async Storage </Text>
+            <Text style={{fontSize:18, textAlign:'center', fontWeight:'bold'}}> Salvar informações no Async Storage </Text>
 
             <TextInput 
                 placeholder="DIgite seu nome"
@@ -44,6 +44,8 @@ export default () => {
                 title="Salvar no Async Storage"
                 onPress={ handleSave }
             />
+
+            <Text style={{fontSize:18, textAlign:'center', fontWeight:'bold'}}> Buscando informações do Async Storage </Text>
 
             <Text> { nome } </Text>
             <Text> { endereco } </Text>
